@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManipulateSentence</title>
+</head>
+
+<body>
+
+
+    <!-- count the number of character -->
+    <!-- convert sentence to uppercase -->
+    <!-- find and display position of specific word in the sentence -->
+
+    <form>
+        <label> Enter a sentence for us to manipulate as we want</label> <br>
+        <input type="text" id="myInput"> <br>
+        <button onclick="countNoChar()">Count the number of characters in your sentence</button><br>
+
+
+        <label> What word are you looking for?</label> <br>
+        <input type="text" id="specialWord"> <br>
+        <button onclick="findSpecialWord()">Find Your Special Word</button><br>
+
+    </form>
+
+
+    <script>
+
+        const inputField = document.getElementById("myInput");
+        inputField.addEventListener("keyup", function (event) {
+            event.preventDefault();
+            inputField.value = inputField.value.toUpperCase();
+        });
+
+        var str = "myInput";
+        var numberOfCharacters = str.length;
+        console.log("Number of characters: " + numberOfCharacters);
+
+    </script>
+</body>
+
+</html>
